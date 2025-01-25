@@ -9,8 +9,8 @@
     "start": "concurrently \"node client/app.js\" \"node server.js\"",
     "start-server": "concurrently -n \"BACKEND,CLIENT,FRONTEND\" -c \"blue,green,magenta\" \"nodemon server.js\" \"nodemon client/app.js\" \"cd frontend && npm run dev\"",
     "build": "npm run install-backend && npm run install-frontend && npm run build-frontend",
-    "install-backend": "npm install --legacy-peer-deps",
-    "install-frontend": "npm install --legacy-peer-deps --prefix frontend",
+    "install-backend": "npm install",
+    "install-frontend": "npm install --prefix frontend",
     "build-frontend": "npm run build --prefix frontend"
   },
   "keywords": [],
